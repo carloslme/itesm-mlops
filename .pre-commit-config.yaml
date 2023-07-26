@@ -4,6 +4,7 @@ repos:
   hooks:
     - id: autopep8
       exclude: '^$'  # Specify files or patterns to exclude, '^$' excludes nothing (all files will be checked)
+      args: [--verbose]
 
 - repo: https://github.com/PyCQA/flake8
   rev: 6.0.0
