@@ -64,6 +64,7 @@ Output
 
  <details open>
     <summary>Pre-commit output, click to collapse</summary>
+    
     ```bash
     [WARNING] The 'rev' field of repo 'https://github.com/pre-commit/mirrors-autopep8' appears to be a mutable reference (moving tag / branch).  Mutable references are never updated after first install and are not supported.  See https://pre-commit.com/#using-the-latest-version-for-a-repository for more details.  Hint: `pre-commit autoupdate` often fixes this.
     [INFO] Initializing environment for https://github.com/pre-commit/mirrors-autopep8.
@@ -175,8 +176,22 @@ To fix the `autopep8`, follow the instructions below:
     ```
 
 ### Step 8. Modify the `.pre-commit-config.yaml` file
-* Include this code to add an explanation about what is wrong in the code.
+* Include the `args: [--verbose]` code to add an explanation about what is wrong in the code.
+    ```yaml
+    repos:
+    - repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: ''  # Specify a specific version/tag/commit or leave empty for the latest version
+    hooks:
+        - id: autopep8
+        exclude: '^$'  # Specify files or patterns to exclude, '^$' excludes nothing (all files will be checked)
+        args: [--verbose]
 
+    - repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+    - id: flake8
+        args: [--ignore=E501]
+    ```
     > **NOTE**  
         Do not forget to change again the `iris.py` file to the original code in previous steps.
 
