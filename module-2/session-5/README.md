@@ -29,7 +29,7 @@ Here's the code `.pre-commit-config.yaml` with the pre-commit hooks we will use 
 
 ```yaml
 repos:
-  - repo: https://github.com/pre-commit/mirrors-autopep8
+- repo: https://github.com/pre-commit/mirrors-autopep8
     rev: ''  # Specify a specific version/tag/commit or leave empty for the latest version
     hooks:
       - id: autopep8
