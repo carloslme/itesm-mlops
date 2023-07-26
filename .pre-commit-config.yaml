@@ -1,6 +1,6 @@
 repos:
 - repo: https://github.com/pre-commit/mirrors-autopep8
-  rev: ''  # Specify a specific version/tag/commit or leave empty for the latest version
+  rev: 'v2.0.2'  # Specify a specific version/tag/commit or leave empty for the latest version
   hooks:
     - id: autopep8
       exclude: '^$'  # Specify files or patterns to exclude, '^$' excludes nothing (all files will be checked)
