@@ -28,5 +28,5 @@ X = [sepal_length, sepal_width, petal_length, petal_width]
 # Make a prediction
 
 prediction = clf.predict_proba([X])
-print({'class': iris_type[np.argmax(prediction)],
-      'probability': round(max(prediction[0]), 2)})
+print({'Class': iris_type[np.argmax(prediction)],
+      'Probability': round(max(prediction[0]), 2)})
