@@ -210,3 +210,20 @@ To fix the `autopep8`, follow the instructions below:
     module-2/session-5/iris.py:33:95: W292 no newline at end of file
     ```
 * Run again the `autopep8` and the file will be modified to handle the errors.
+
+* Once you have finished, you can include the following change in the `.pre-commit-config.yaml` file to run the `autopep8` code automatically and modify the Python file..
+
+    ```yaml
+    ...
+    - repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: ''  # Specify a specific version/tag/commit or leave empty for the latest version
+    hooks:
+        - id: autopep8
+        exclude: '^$'  # Specify files or patterns to exclude, '^$' excludes nothing (all files will be checked)
+        args: [--verbose,  --in-place, --aggressive, --aggressive]
+
+    ```
+
+
+## Activity
+Please go to the [pre-commit.md](./activity/pre-commit.md) file to check the instructions for the activity.
