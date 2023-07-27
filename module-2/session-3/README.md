@@ -129,7 +129,7 @@ The goal of this activity is to migrate the libraries to a newer version of Pyth
     If everything was ok, you should see the same output in the last cell as the kernel `python37`.
 
 
-## Submit results
+## Deliverable
 The file is not going to be uploaded yet, so just keep it until the next session.
 
 
