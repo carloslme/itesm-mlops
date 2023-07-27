@@ -60,19 +60,19 @@ Include a repo that sort the imports of dependencies expressed in the [PEP8 styl
     [Autoflake](https://pypi.org/project/autoflake/) or [Pylint](https://pypi.org/project/pylint/) are a couple of alternatives to do this. Figure out how to use it in the pre-commit or **even combine them**.
 
 ## Code
-The following Python code will be used to test the repos in the following section.
+The following Python code will be used to test the repos in that you have included in the `.pre-commit-config.yaml` file.
 
 * Modify the Python `iris.py` file with this code:
     ```python
-    import os
-    import json
-    from sklearn.datasets import load_iris
+    import os # This is an unused import
+    import json # This is an unused import
+    from sklearn.datasets import load_iris # Import in incorrect order
 
-    import numpy as np
-    import json
+    import numpy as np # Import in incorrect order
+    import json # This is an unused import
 
-    from my_library import test
-    from sklearn.linear_model import LogisticRegression
+    from my_library import test # This is an unused import
+    from sklearn.linear_model import LogisticRegression # Import in incorrect order
 
     # Load data from sklearn
     X, y = load_iris(return_X_y=True)
@@ -94,7 +94,7 @@ The following Python code will be used to test the repos in the following sectio
     prediction = clf.predict_proba([X])
     print({'class': iris_type[np.argmax(prediction)],'probability':round(max(prediction[0]), 2)})
     ```
-* Run the commit to activate the pre-commit. The `iris.py` file output should look like this:
+* Do the commit to activate the pre-commit. The `iris.py` file output should look like this:
     ```python
     import numpy as np
     from sklearn.datasets import load_iris
@@ -125,8 +125,9 @@ The following Python code will be used to test the repos in the following sectio
         'probability': round(max(prediction[0]), 2)})
     ```
 
+    The corrected code above should be the one that is going to be sent to the repository.
 
-## Submit results
-The file to submit is the `.pre-commit-config.yaml` file with the new repos included. This has to be uploaded to your repository.
+## Deliverable
+The deliverable is the `.pre-commit-config.yaml` file with the new repos included. This has to be uploaded to your repository.
 
 The link to share the repo link is available in the Google form provided by the instructor (TBA)
