@@ -130,4 +130,4 @@ The following Python code will be used to test the repos in that you have includ
 ## Deliverable
 The deliverable is the `.pre-commit-config.yaml` file with the new repos included. This has to be uploaded to your repository.
 
-The link to share the repo link is available in the Google form provided by the instructor (TBA)
+The link to share the repo link is available in the Google form provided by the instructor.
