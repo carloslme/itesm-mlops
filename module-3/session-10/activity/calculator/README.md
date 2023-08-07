@@ -1,5 +1,17 @@
-# Activity: Unit Tests
+# Activity: Unit and Integration Tests
 In this activity, you will create the unit tests to validate the functions defined in [operations.py](app/operations.py) script. Follow the instructions below to run the script. Then, create the tests.
+
+## Deliverables
+**Unit tests:**
+Tests for addition, subtraction, multiplication, division and the one that converts fractions to numbers.
+
+**Integration testing:**
+Carry out the test for the following mathematical operation:
+(num1 + num2) * (num3 - num4)
+
+with the following numbers
+(5+5)*(1.25-0.75) = (10)*(0.5) = 5
+(8+7/5)*(15-3/8) = (9.4)*(14.625) = 137.475
 
 ## Preconditions
 It is assumed that you already have Python 3+ installed in its system. If not, please install it.
@@ -60,4 +72,4 @@ I should see the following data output
 Write here your commands to run the Pytest tests.
 
 > **Note**  
-Check this [file](comandos_auxiliares.md) to see more Pytest commands 
+Check this [auxiliar_commands](auxiliar_commands.md) to see more Pytest commands 
