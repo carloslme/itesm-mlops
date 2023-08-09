@@ -1,5 +1,5 @@
 # OOP Fundamentals
-Instructor: Carlos Mejia
+Instructors: Angel Lopez, Carlos Mejia
 
 This session is focused on the fundamentals of Objected Oriented Programming applied to data pipelines used in Machine Learning pipelines.
 
