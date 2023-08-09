@@ -1,5 +1,11 @@
 from enum import Enum
-from fastapi import FastAPI, Body, Path, Query, HTTPException, status
+from fastapi import (
+    FastAPI, 
+    Body,
+    Path, 
+    Query, 
+    HTTPException,
+    status)
 from .calculator import calculator as calc
 
 
@@ -15,6 +21,7 @@ PARAMETER VALUES
 Values are required after de endpoint.
 """
 
+
 @app.get('/', status_code=200)
 async def healthcheck():
     return 'Calculator is all ready to go!'
@@ -23,7 +30,7 @@ async def healthcheck():
 @app.get("/sum/{v1}/{v2}")
 async def sum(v1: int, v2: int):
     """
-    Calculate the sum of two integer values.
+    Calculate the sum of two integer values.....
 
     This endpoint calculates the sum of two integer values and returns the result.
 
