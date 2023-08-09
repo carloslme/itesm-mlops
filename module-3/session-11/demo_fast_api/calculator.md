@@ -19,11 +19,12 @@ Run the following command to install the libraries/packages.
     ```
 
 ## Run FastAPI
-Run next command to start calculator api locally
 
-```bash
-uvicorn src.main:app --reload
-```
+* Change to the [demo_fast_api](.) directory
+* Run next command to start calculator api locally 
+    ```bash
+    uvicorn src.main:app --reload
+    ```
 
 ## Checking endpoints
 1. Access `http://127.0.0.1:8000/`, you will see a message like this `"Calculator is all ready to go!"`
