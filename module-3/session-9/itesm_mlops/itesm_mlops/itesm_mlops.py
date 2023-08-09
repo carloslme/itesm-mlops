@@ -46,6 +46,8 @@ if __name__ == "__main__":
     
     print(os.getcwd())
     os.chdir('/Users/carlos/itesm-mlops/module-3/session-9/itesm_mlops/itesm_mlops')
+    # Resolver usando `join`
+    
     # Retrieve data
     data_retriever = DataRetriever(URL, DATASETS_DIR)
     result = data_retriever.retrieve_data()
