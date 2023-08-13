@@ -6,7 +6,7 @@ In this activity, you will add the code to refactor and make more efficient the 
 
 ### Virtual environment
 
-Change the directory to `module-3/session-8/activity`.
+Change the directory to `module-3/session-9/activity`.
 
 1. Create a virtual environment with `Python 3.10+`
     * Create venv
