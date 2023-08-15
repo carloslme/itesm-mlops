@@ -276,6 +276,8 @@ class NumericalImputer(BaseEstimator, TransformerMixin):
                 If a single string is provided, it will be treated as a single variable. Default is None.
         """
         self.variables = [variables] if not isinstance(variables, list) else variables
+        print(self.variables)
+        self.median_dict = {}
 
     def fit(self, X, y=None):
         """

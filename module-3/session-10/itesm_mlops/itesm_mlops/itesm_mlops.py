@@ -37,15 +37,19 @@ SELECTED_FEATURES = ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'cabin', 
        'sex_male', 'cabin_Missing', 'cabin_rare', 'embarked_Q', 'embarked_S',
        'title_Mr', 'title_Mrs', 'title_rare']
 
-TRAINED_MODEL_DIR = './models/'
-PIPELINE_NAME = 'logistic_regression'
+TRAINED_MODEL_DIR = './itesm_mlops/models/'
+MODEL_NAME = 'logistic_regression_model'
+PIPELINE_NAME = 'logistic_regression_pipeline'
+MODEL_SAVE_FILE = f'{MODEL_NAME}_output.pkl'
 PIPELINE_SAVE_FILE = f'{PIPELINE_NAME}_output.pkl'
 
 
 if __name__ == "__main__":
     
     print(os.getcwd())
-    os.chdir('/Users/carlos/itesm-mlops/module-3/session-9/itesm_mlops/itesm_mlops')
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    parent_dir = os.path.abspath(os.path.join(current_dir, ".."))
+    os.chdir(parent_dir)
     # Retrieve data
     data_retriever = DataRetriever(URL, DATASETS_DIR)
     result = data_retriever.retrieve_data()
@@ -81,8 +85,15 @@ if __name__ == "__main__":
     print(f'test roc-auc : {roc_auc_score(y_test, proba_pred)}')
     print(f'test accuracy: {accuracy_score(y_test, class_pred)}')
     
-    # # Save the model using joblib
-    save_path = TRAINED_MODEL_DIR + PIPELINE_SAVE_FILE
-    joblib.dump(logistic_regression_model, save_path)
-    print(f"Model saved in {save_path}")
+    # # Save the model and pipeline using joblib
+    # Create the directory if it doesn't exist
+    os.makedirs(TRAINED_MODEL_DIR, exist_ok=True)
+    model_save_path = TRAINED_MODEL_DIR + MODEL_SAVE_FILE
+    print(model_save_path)
+    pipeline_save_path = TRAINED_MODEL_DIR + PIPELINE_SAVE_FILE
+    print(pipeline_save_path)
+    joblib.dump(logistic_regression_model, model_save_path)
+    joblib.dump(titanic_data_pipeline, pipeline_save_path)
+    print(f"Model saved in {model_save_path}")
+    print(f"Pipeline saved in {pipeline_save_path}")
     

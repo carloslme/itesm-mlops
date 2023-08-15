@@ -1,0 +1,3 @@
+pclass,sex,age,sibsp,parch,fare,cabin,embarked,title
+215,1,male,58.0,0,2,113.275,D48,C,Mr
+378,2,male,31.0,1,1,26.25,,S,Mr
