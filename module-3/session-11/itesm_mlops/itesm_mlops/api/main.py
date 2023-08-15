@@ -19,7 +19,7 @@ async def healthcheck():
     return 'Titanic classifier is all ready to go!'
 
 @app.post('/predict')
-def extract_name(titanic_features: Titanic):
+def predict(titanic_features: Titanic) -> JSONResponse:
     predictor = ModelPredictor("/Users/carloslme/Documents/GitHub/itesm-mlops/module-3/session-11/itesm_mlops/itesm_mlops/models/logistic_regression_output.pkl")
     X = [titanic_features.pclass_nan,
         titanic_features.age_nan,
@@ -34,5 +34,6 @@ def extract_name(titanic_features: Titanic):
         titanic_features.title_Mr,
         titanic_features.title_Mrs,
         titanic_features.title_rar]
+    print([X])
     prediction = predictor.predict([X])
     return JSONResponse(f"Resultado predicción: {prediction}")
