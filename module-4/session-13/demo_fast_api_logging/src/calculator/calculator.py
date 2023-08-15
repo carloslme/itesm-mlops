@@ -1,17 +1,6 @@
 import string
 import numpy as np
-import logging
 
-logger = logging.getLogger(__name__) # Indicamos que tome el nombre del modulo
-logger.setLevel(logging.DEBUG) # Configuramos el nivel de logging
-
-formatter = logging.Formatter('%(asctime)s:%(name)s:%(module)s:%(levelname)s:%(message)s') # Creamos el formato
-
-file_handler = logging.FileHandler('calculator.log') # Indicamos el nombre del archivo
-
-file_handler.setFormatter(formatter) # Configuramos el formato
-
-logger.addHandler(file_handler) # Agregamos el archivo
 
 class Calculator:
     def get_fractions(self, frac_str: (int or float or string)) -> (int or float):
@@ -29,13 +18,11 @@ class Calculator:
         """
 
         if isinstance(frac_str, (int, float)):
-            logger.info(f"Method get_fractions returned value: {frac_str}")
             return frac_str
 
         if "/" not in frac_str:
             return float(frac_str)
         try:
-            logger.info(f"Method get_fractions returned value: {float(frac_str)}")
             return float(frac_str)
         except ValueError:
             num, denom = frac_str.split("/")
@@ -45,7 +32,6 @@ class Calculator:
             except ValueError:
                 whole = 0
             frac = float(num) / float(denom)
-            logger.info(f"Method get_fractions returned value: {whole - frac if whole < 0 else whole + frac}")
             return whole - frac if whole < 0 else whole + frac
 
 
@@ -67,8 +53,6 @@ class Calculator:
 
         sum_a = self.get_fractions(a)
         sum_b = self.get_fractions(b)
-        logger.info(f"Method sum input values: {sum_a, sum_b}")
-        logger.info(f"Method sum returned value: {np.sum([sum_a, sum_b])}")
         return np.sum([sum_a, sum_b])
 
 
@@ -91,8 +75,6 @@ class Calculator:
 
         minuend = self.get_fractions(a)
         subtrahend = self.get_fractions(b)
-        logger.info(f"Method subtract input values: {minuend, subtrahend}")
-        logger.info(f"Method subtract returned value: {minuend - subtrahend}")
         return minuend - subtrahend
 
 
@@ -114,8 +96,6 @@ class Calculator:
 
         multiplicand = self.get_fractions(a)
         multiplier = self.get_fractions(b)
-        logger.info(f"Method multiply input values: {multiplicand, multiplier}")
-        logger.info(f"Method multiply returned value: {multiplicand * multiplier}")
         return multiplicand * multiplier
 
 
@@ -138,11 +118,8 @@ class Calculator:
 
         dividend = self.get_fractions(a)
         divider = self.get_fractions(b)
-        logger.info(f"Method divide input values: {dividend, divider}")
-
+        
         try:
-            logger.info(f"Method divide returned value: {np.divide(dividend, divider)}")
             return np.divide(dividend, divider)
         except ZeroDivisionError:
-            logger.exception('Tried to divide by zero. Division by zero is not allowed!')
             return "Division by zero is not allowed!"
