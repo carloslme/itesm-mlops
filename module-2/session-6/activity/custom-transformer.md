@@ -1,4 +1,5 @@
 # Activity: Custom Transformer
+
 Create a custom transformer that allows to double the columns and add to the end the text "`_nan`" to each name  (column title). Then identify missing or null data in each row.
 
 Check the following steps:
@@ -21,7 +22,6 @@ Check the following steps:
 5. Print the results. This is a view of how they should see.
 
     ![Alt text](5_results.png)
-
 
 The red boxes indicate that a null value was found in the `age` field, and this was marked as 1 in the `age_nan` added field.
 

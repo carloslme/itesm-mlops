@@ -30,4 +30,4 @@ Change the directory to `module-3/session-9/activity`.
 
 ## Modifications
 
-Add your code to refractorize this code to make it cleaner and modular.
+Add your code to refactorize this code to make it cleaner and modular.
