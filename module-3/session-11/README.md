@@ -6,10 +6,10 @@ This session is focused on giving an introduction to Rest API and the Fastapi Fr
 
 * Change the directory to the `module-3/session-11/itesm_mlops/itesm_mlops` folder.
 
-* Create a virtual environment with Python 3+:
+* Create a virtual environment with Python 3.10+:
 
     ```bash
-    python3 -m venv venv
+    python3.10 -m venv venv
     ```
 
 * Activate the virtual environment
@@ -34,7 +34,7 @@ Follow the next steps to run the test.
 * Change the directory and run the following command:
 
     ```bash
-    cd session-10/itesm_mlops/
+    cd session-11/itesm_mlops/
     ```
 
 * Then run:
