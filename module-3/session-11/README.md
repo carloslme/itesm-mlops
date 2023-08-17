@@ -25,6 +25,38 @@ Run the following command to install the libraries/packages.
     pip install -r requirements.txt
     ```
 
+## Running tests
+
+The following test validates the [load_data.py](itesm_mlops/itesm_mlops/load/load_data.py) module, with the `DataRetriever` class.
+
+Follow the next steps to run the test.
+
+* Change the directory and run the following command:
+
+    ```bash
+    cd session-10/itesm_mlops/
+    ```
+
+* Then run:
+
+    ```bash
+    pytest ./tests/test_itesm_mlops.py::test_csv_file_existence -v
+    ```
+
+* You should see the following data output:
+
+    ```pytest
+    ================================================ test session starts =================================================
+    platform darwin -- Python 3.10.12, pytest-7.4.0, pluggy-1.2.0 -- /Users/carlos/itesm-mlops/module-3/session-10/itesm_mlops/venv-tests/bin/python3.10
+    cachedir: .pytest_cache
+    rootdir: /Users/carlos/itesm-mlops/module-3/session-10/itesm_mlops
+    collected 1 item                                                                                                     
+
+    tests/test_itesm_mlops.py::test_csv_file_existence PASSED                                                      [100%]
+
+    ================================================= 1 passed in 2.85s ==================================================
+    ```
+
 ## Run FastAPI
 
 * Run the next command to start the Titanic API locally
