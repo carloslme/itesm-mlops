@@ -1,79 +1,11 @@
-# Patterns and deployment infrastructure
+# Docker Compose
 
-This session is focused on giving an introduction to the deployment of ML models in production. It contemplates talking about the patterns and deployment infrastructure, the management of models and delivery.
+This session introduces Docker Compose as a tool for manipulating and managing multiple containers, necessary to have multiple models in development, staging, and production.
 
-There is also talk about Logging as a good practice to save system records.
+## Demo
 
-## Docker commands
+Access this [README](session-15/iris_docker_compose/README.md) file to see the demo implementation.
 
-* Build image
+## Activity
 
-    ```bash
-    docker build -t myimage . 
-    ```
-
-* Create container
-
-    ```bash
-    docker run -d --name mycontainer -p 80:80 myimage
-    ```
-
-* List images
-
-    ```bash
-    docker image ls
-    ```
-
-* List containers and their current states
-
-    ```bash
-    docker ps -a
-    ```
-
-* Start container
-
-    ```bash
-    docker start CONTAINER_ID|NAME
-    ```
-
-* Show logs to debug
-
-    ```bash
-    docker logs CONTAINER_ID|NAME
-    ```
-
-* Stop container
-
-    ```bash
-    docker stop CONTAINER_ID|NAME
-    ```
-
-* Delete container
-
-    ```bash
-    docker rm CONTAINER_ID|NAME
-    ```
-
-* Delete image
-
-    ```bash
-    docker image rm REPOSITORY Eliminar
-    ```
-
-* Open container terminal
-
-    ```bash
-    docker exec -it CONTAINER_ID bash
-    ```
-
-* Delete image by ID
-
-    ```bash
-    docker rmi CONTAINER_ID
-    ```
-
-* Copy logs to local machine
-
-    ```bash
-    docker cp ID:/app/logs.log .
-    ```
+The activity is similar to the demo. Open this [activity-docker-compose.md](session-15/activity/activity-docker-compose.md) to see the instructions.
