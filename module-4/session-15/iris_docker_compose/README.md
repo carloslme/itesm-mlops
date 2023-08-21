@@ -28,7 +28,7 @@ The Iris dataset is a simple, yet popular dataset consisting of 150 observations
 
 * Just open your terminal, go or create a directory, and run the following command:
 
-```
+```bash
 cd module-4/session-15/iris_docker_compose
 ```
 
@@ -39,7 +39,7 @@ It is recommended to create a new directory and copy there all the code in this 
 
 * Create a virtual environment with:
 
-```bash
+```python
 python3 -m venv venv
 ```
 
