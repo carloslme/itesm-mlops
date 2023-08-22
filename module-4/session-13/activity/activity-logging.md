@@ -38,3 +38,16 @@ Check the [logging-advanced.ipynb](logging-advanced.ipynb) notebook to see how t
 * Replace the logger in the [main.py](../demo_fast_api_logging/src/main.py) module by a instance of your class.
 
 * Then, replace the logger in the [calculator.py](../demo_fast_api_logging/src/calculator/calculator.py) module by a instance of your class.
+
+* The directory structure should be seen as follows:
+
+    ```bash
+    my-project
+    ├── api
+    │   ├── main.py
+    │   └── models
+    ├── other-directories
+    └── utilities
+        ├── __init__.py
+        └── custom_logging.py
+    ```
