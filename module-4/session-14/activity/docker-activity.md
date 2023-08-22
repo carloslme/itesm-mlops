@@ -5,7 +5,7 @@ In this activity, you will migrate a Fast API application to a Docker applicatio
 
 ## Task
 
-Create a copy of the [demo_fast_api_logging](../../session-13/activity/activity-logging.md) project in session 13, and modify it to meet the requirements below:
+Create a copy of the [demo_fast_api_logging](../../session-13/demo_fast_api_logging) project in session 13, and modify it to meet the requirements below:
 
 * Create a `Dockerfile` file to copy all the necessary content and expose it in the port 8000
 * Include the well-explained instructions to:
